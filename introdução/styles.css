@@ -1,0 +1,197 @@
+/*IMAGE BACKGROUND & SOLID BACKGROUND / - Podemos definir cor ou imagem de fundo do site inteiro, ou tão somente em alguma área específica*/
+
+body {
+	background-image: url("img/sunset.jpg");
+	background-repeat: no-repeat;" /*imagem deixa de repetir*/
+	/*Podemos ainda dar o comando - "backgroud-repeat: repeat-x" ou "y" que determina que a imagem se repita só horizontalmente ou verticalmente*/
+	background-position: center; /*Centraliza a imagem na tela*/
+	background-attachment: fixed; /*Fixa a imagem e faz com que ela role de acordo com o scroll*/
+	background-size: cover; /*Define que a imagem preencha todo o background*/
+}
+
+/*PROPRIEDADES DO TEXTO*/
+
+p { 
+	color: #738290; /*Definição da cor do texto que pode ser em - "hexadecimal" # (Sequência de 6 número) / "rgba" / "nome da cor" em inglês*/
+	font-style: normal; /*Define o estilo da fonte variando entre - "itálico" / "normal" / "oblicuo"*/
+	font-weight: bold; /*Define o peso do texto que pode ser - "normal" / "bold" / "bolder" / "lighter" / de "100 à 900"*/
+	font-size: 1em; /*Define o tamanho do texto, valores em - "px" / "em" / "%"/ a sigla "em" é uma unidade relativa, ex: 1em = 16px a depender do browser*/
+	line-height: 25px; /*Define a altura da linha do texto. O espaço entre a linha de texto de cima e a que vem logo a baixo*/
+	font-family: helvetica; /*Define o estilo da fonte, bem como a família da fonte*/
+	text-align: left; /*Define o alinhamento do texto em - "left" / "right"*/
+	text-transform: uppercase; /*Define o texto entre - "uppercase" texto em maiúsculo / "capitalize" apenas iniciais em maiúsculo / "lowercase" tudo minúsculo*/
+	text-indent: 20px; /*Identa ou dá margem para o início de um texto*/
+	text-decoration: overline; /*Define aspectos ao texto com - "underline" sublinhado a baixo / "overline" sublinhado a cima / "line-through" sublinhado no meio*/
+	text-shadow: 1px 1px 1px #3f3; /* Define uma sombra - n°.1 - deslocamento horizontal / n°.2 - deslocamento vertical / n°.3 - disperção da sombra / 4° - cor da sombra*/
+	word-spacing: 2px; /*Define um espaço entre as palavras*/
+	letter-spacing: 2px; /*Define um espaço entre as letras*/	
+}
+
+a { 
+	text-decoration: none; /*Retira o sublinhado dos links, deixando-os livres para edição*/
+}
+
+/*PROPRIEDADES DE UMA LISTA*/
+
+ul { 
+	list-style-type: circle; /*Altera o estado do bullet - "circle" para esférico e vasado / "disc" para preenchido / "square" para deixar quadrado*/
+	list-style-position: inside; /*Determina se eu deixo o bullet por dentro ou por fora da lista*/
+	list-style-image: url("img/warcraft.jpg"); /*Adiciona uma imagem ao invés de bullets na lista*/
+	/*O próximo e mais ultilizado é o atributo "none"! Por que a maioria das listas que se cria na web geralemente não leva bullets nem sequência de números.
+	Ex: Lista para um menu, lista para uma galeria de fotos...*/
+	list-style:none; /*Configurado em "none" retira todas as propriedades do bullet*/
+}
+
+/*BOX MODEL - A estrutura de um site são formadas por blocos*/
+
+.container {
+	width: 900px; /*Define o tamanho horizontal do box. Pode ser configurado em: px / % / auto*/
+	height: 500px; /*Define aqui o tamanho vertical do box. Outra vez podendo ser configurado em: px / % / auto*/
+	padding: 20px 20px 20px 20px; /*Define uma margem interna para o box, sendo possível configurar os 4 lados do box.
+	A sequencia de definição é: "padding Top" / "padding right" / "paddign bottom" / "padding left" - (Basicamente no sentido horário)*/
+	border: 1px; /*Define uma borda para o box*/
+	margin: 0 auto; /*Funciona ao contrário do padding, colocando o espaço de distanciamento para fora do box / "margin: 0 auto;" centraliza o box*/
+	background-color: #ccc; /*Define cor para o box*/
+}
+
+.box-1 { /*Um box dentro do box principal*/
+	width: 200px;
+	height: 300px;
+	padding: 20px 20px 20px 20px;
+	border: 1px solid red; 
+	border-style: dotted; /*Estilo da borda que pode ser - "dotted" / "solid" / "double" / "hidden" / "groove"...*/
+	background-color: white;
+}
+
+.box-2 { /*Simulação do Padding apenas em um lado do box*/
+	width: 200px;
+	height: 300px;
+	padding-left: 30px;
+	background-color: white;
+}
+
+/*POSICIONAMENTO DO BOX MODEL*/
+/*"float" - Faz com que um elemento de box flutue ao lado do outro. Valores - "left" / "hight" / "none"*/
+/*"clear" - Impede que o elemento flutue ao seu lado. Valores - "both" / "left" / "right" / "none"*/
+
+header {
+	width: 800px;
+	height: 80px;
+	background-color: #6b35b3;
+	margin-bottom: 10px;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	font-family: helvetica;
+	font-size: 30px;
+	padding: 10px 0;
+}
+
+h2 {
+	text-align: center;
+	color: white;
+	font-family: helvetica;
+	font-size: 30px;
+	font-weight: normal;
+	padding: 10px 0;
+}
+
+article {
+	width: 500px;
+	height: 200px;
+	background: #aa4aaa;
+	float: left; /*Define flutuamento para este elemento, alinhado o mesmo ao lado do outro elemento*/
+}
+
+aside {
+	width: 290px;
+	height: 200px;
+	background: #929982;
+	float: left;
+	margin-left: 10px;
+}
+
+footer {
+	width: 800px;
+	height: 80px;
+	background-color: #290999;
+	clear: both; /*Como o elemento "footer" vem depois do "article e aside" colocamos o atributo "both" para dizer ao código que não quero
+	continuar com o atributo "float" para este elemento. Assim o "footer" vai ficar em seu devido lugar*/
+}
+
+.container-header {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.artigo {
+	margin-bottom: 10px;
+	overflow: visible; /*Especifica o que acontece quando o conteúdo for maior que a caixa dele. Valores - "visible" / "hidden" / "auto" / "scroll"*/
+	/*Dica! Use o "overflow: auto;" na caixa que envolve elementos flutuantes*/
+	position: relative;
+	float: left;
+}
+
+/*POSITION - Servirá para forçar um posicinameto*/
+/*Os valores do "position" são - "static" / "absolute" / "relative" / "fixed"*/
+/*Com o "top" / "left" / "bottom" / "right" definimos qual distância o elemento terá*/
+/*Ainda temos o "z-index" que define qual elemento vem por cima e por baixo. O maior valor sempre será o que vem por cima*/
+
+.box-extra {
+	width: 100px;
+	height: 100px;
+	background-color: #fccccd;
+	top: -10px;
+	left: -10px;
+	position: absolute;
+}
+
+/*DISPLAY - Define o comportamento do elemento. Elementos como "span", e "strong" possuem por padrão o "display inline". Elementos inline não quebram linhas.*/
+/*"div" / "article" / "p" / "h1" / "li" e outros possuem por padrão o "display block", então sempre que adicionados quebram uma linha*/
+/*É possível declarar "widht" e "hight" para elementos de bloco, mas não para elementos "inline". Existe também o inline-block que por padrão não quebra a linha, mas permite
+declaramos width e height*/
+
+li {
+	font-family: helvetica;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	text-align: center;
+	width: 120px;
+	height: 14px;
+	padding: 20px;
+	display: inline-block;
+	background-color: #ccc;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

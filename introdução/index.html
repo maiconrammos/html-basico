@@ -1,0 +1,204 @@
+<!DOCTYPE html> <!--Definição do tipo de documento-->
+<html lang="pt-br"> <!--Tipo de linguagem do site-->
+
+	<head> <!--"Cabeçalho", tudo que vai aqui em Head não aparece no corpo do site-->
+		<title>Título da Página</title> <!--Este é o título do site, ele aparece junto com o Favicon e é a nossa referência de pesquisa Google-->
+		<meta charset="utf-8"> <!--Código de texto usado no site-->
+		<link rel="stylesheet" type="text/css" href="styles.css"> <!--Código para chamar e linkar o estilo CSS-->
+	</head>
+
+	<body> <!--Corpo do site, aqui vai todo o conteúdo do nosso site!-->
+
+	<!--Alguns exemplos de TAGS-->
+
+		<!--Montando uma estrutura básica de site-->
+
+		<div class="container-header"> <!--Aqui temos uma div para dar a possibilidade de controlar toda esta etrutura-->
+			<header>
+				<h1>Header</h1>
+			</header>
+
+			<div class="artigo">
+				<article>
+					<h1>Conteúdo</h1>
+				</article>
+
+				<div class="box-extra">
+					<h2>M</h2>
+				</div>
+
+				<aside>
+					<h1>Sidebar</h1>
+				</aside>
+			</div>
+
+			<footer>
+				<h1>Footer</h1>
+			</footer>
+		</div>
+
+		<ul class="menu">
+			<li>home</li>
+			<li>sobre</li>
+			<li>portfolio</li>
+			<li>contato</li>
+			<li>especial</li>	
+		</ul>
+
+		<!--Um simples parágrafo-->
+		<p>	
+			Seja bem-vindo a este site!
+			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		</p>
+
+		<!--Um box com texto-->
+		<div class="container">
+			<div class="box-1">
+				<p>
+					It is a long established fact that a reader.
+				</p>
+			<div class="box-2">
+				<p>
+					It is a long established fact that a reader.
+				</p>
+			</div>
+		</div>
+
+		<!--Estilos de títulos-->
+		<p>
+			<h1>Estilo 1 (Título Principal)</h1> <!--Importante aqui no H1 é que ele é o ponto principal de ratreamento do robô de pesquisa Google-->
+			<h2>Estilo 2</h2>
+			<h3>Estilo 3</h3>
+			<h4>Estilo 4</h4>
+			<h5>Estilo 5</h5>
+			<h6>Estilo 6 (Último e menor estilo)</h6>
+		</p>
+
+		<!--Destaque em alguma parte do texto, com semântica. "Semântica é o destaque necessário em html que adiciona facilidade nas pesquisas."-->
+		<p>
+			Exemplo de <strong>destaque</strong> para esse texto.
+		</p>
+
+		<!--Temos também o destaque sem semântica, onde ele apenas apresenta o estilo em bold-->
+		<p>
+			Segundo exemplo de <b>destaque</b> sem semântica.
+		</p>
+
+		<!--Destaque para texto em Itálico.-->
+		<p>
+			Amostra de texto em <i>Itálico</i>
+		</p>
+
+		<!--Abrir um link para acesso à uma página diferente-->
+		<p>
+			Acesse Graphic Burguer: <a href="http://graphicburger.com" target="blank">Acesse aqui!<a/>
+		</p> 
+
+		<!--Para acessar uma página dentro do próprio site (Página Interna) Ex: Produtos... Galeria... ou Contato-->
+		<a href="produtos.html"> <!--Lembrando que esta nomeclatura deve ser referênte a uma página que está na mesma pasta da Index / Home-->
+			Nossos Produtos
+		</a> 
+
+		<!--Inserir uma pausa ou quebra no texto.-->
+		<p>
+			Aqui está uma amostra de pausa ou quebra no <br> texto de uma forma forçada.
+		</p>
+
+		<!--Para criar um botão-->
+		<button type="button">
+			Clique Aqui!</button><br>
+
+		<!--Desenvolvendo uma lista simples-->
+		<ul>
+			<li>Passeio</li>
+			<li>Casa de Praia</li>
+			<li>Festas</li>
+		</ul>
+
+		<!--Desenvolvendo uma lista ordenada (Segue uma ordem sequente exata)-->
+		<ol>
+			<li>Passeio</li>
+			<li>Casa de Praia</li>
+			<li>Festas</li>
+		</ol>
+
+		<!--Lista como menu clicável-->
+		<ul>
+			<li><a href="Passeio.html">Passeio</a></li>
+			<li><a href="Casa de Praia.html">Casa de Praia</a></li>
+			<li><a href="Festas.html">Festas</a></li>
+		</ul>
+
+		<!--Criando uma tabela-->
+		<table>
+			<tr> <!--Linha da coluna-->
+				<th>Passeio</th> <!--Título da coluna-->
+				<th>Preço</th>
+			</tr>
+			<tr>
+				<td>Restaurante</td> <!--Descrição da coluna-->
+				<td>R$ 300,00</td>
+			<tr>
+				<td>Hotel</td> <!--Descrição da coluna-->
+				<td>R$ 2.800,00</td>
+			</tr>
+		</table>
+
+		<!--Adicionar imagem a partir da pasta "IMG" localizada na mesma pasta onde está a Index-->
+		<img src="img/warcraft.jpg" alt="DOTA"><br>
+		
+		<!--Adicionar imagem a partir de uma URL (Imagem da internet) OBS: Porém se a imagem for retirada da internet o link ficará inválido-->
+		<img src="http://graphicdesign-blog.com/wp-content/uploads/2013/01/Marta_Brinchi_Giusti_Infame.gif" alt="DOTA">
+		
+		<!--"DIV" Uma div tem a estrutura de "Bloco" e faz mais sentido com o CSS. A div quebra uma linha-->
+		<div>
+			<p>
+				Aqui <div>tem uma DIV</div>
+			</p>
+		</div>
+
+		<!--"Span" Já aqui a estrutura vem em linha, separa o texto mas não faz quebras! Mas também faz mais sentido quando usado junto ao CSS-->
+		<span>
+			<p>
+				Aqui tem <span>um SPAN</span> mesmo não aparecendo
+			</p>
+		</span>
+
+		<!--TAGS com sentido semântico: Section & Article--> 
+		<!--Article serve para indicar um artigo ou definição de produtos (Parte independente do documento)-->
+		<!--Já uma section pode vir dentro de um aticle ou outro local defendendo uma sessão (Parte genérica do documento)-->
+		<!--Um exemplo de Article:-->
+		<article>
+			<header>Este é o cabeçalho da página ou artigo</header> <!--Cabeçalho do artigo-->
+			<p>Conteúdo do artigo</p> <!--Texto geral do artigo-->
+			<footer>Rodapé do artigo</footer> <!--Final, rodapé do artigo ou página-->
+		</article>
+
+		<!--FORM (Formulário de Contato)-->
+		<form action="enviar.php" method="post" name="form">
+			<div> <!--A DIV aqui está servindo apenas como separador. Tirando todo o conteúdo da horizontal para um estado vertical-->
+				<label for="name">Nome</label> <!--Label é o nome da área a ser preenchida-->
+				<input id="name" name="nome" type="texto" required> <!--O "for","id" e "name" linka o Label ao Input-->
+			</div>
+
+			<div>
+				<label for="email">E-mail</label>
+				<input id="email" name="email" type="text" required> <!--"Required" serve para deixar o campo obrigadtório a ser preenchido-->
+			</div>
+
+			<div>
+				<label for="senha">Senha</label>
+				<input id="senha" name="senha" type="password" required> <!--"Password" serve para deixar o campo com preenchimento de senha-->
+			</div>
+
+			<div>
+				<label for="mensagem">Mensagem</label>
+				<textarea id="mensagem" name="mensagem" required></textarea>
+			</div>
+
+			<button id="enviar" name="enviar" type="submit">Enviar</button>
+		</form>
+
+	</body>
+
+</html>
